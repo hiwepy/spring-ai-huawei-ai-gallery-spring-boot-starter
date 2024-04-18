@@ -8,19 +8,19 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 @ConfigurationProperties(HuaweiAiGalleryEmbeddingProperties.CONFIG_PREFIX)
 public class HuaweiAiGalleryEmbeddingProperties {
 
-    public static final String CONFIG_PREFIX = "spring.ai.llm.embedding";
+    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.gallery.embedding";
 
     public static final String DEFAULT_EMBEDDING_MODEL = "embedding-v1";
 
     /**
-     * Enable 百度千帆 embedding client.
+     * Enable Huawei Gallery embedding client.
      */
     private boolean enabled = true;
 
     public MetadataMode metadataMode = MetadataMode.EMBED;
 
     /**
-     * Client lever 百度千帆 options. Use this property to configure generative temperature,
+     * Client lever Huawei Gallery options. Use this property to configure generative temperature,
      * topK and topP and alike parameters. The null values are ignored defaulting to the
      * generative's defaults.
      */
