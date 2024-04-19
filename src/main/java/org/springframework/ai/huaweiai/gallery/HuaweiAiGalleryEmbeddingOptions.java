@@ -10,23 +10,29 @@ import java.util.Map;
 
 public class HuaweiAiGalleryEmbeddingOptions implements EmbeddingOptions {
 
-    /**
-     * NOTE: Synthetic field not part of the official ZhiPuAi API.
-     * Used to allow overriding the model name with prompt options.
-     */
     @JsonProperty("model")
-    private String model;
+    private String endpoint;
+
+    @JsonProperty("model")
+    private String appId;
 
     @JsonProperty("user")
     private String user;
 
-
-    public void setModel(String model) {
-        this.model = model;
+    public String getEndpoint() {
+        return endpoint;
     }
 
-    public String getModel() {
-        return model;
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
     public String getUser() {
@@ -49,8 +55,18 @@ public class HuaweiAiGalleryEmbeddingOptions implements EmbeddingOptions {
             this.options = new HuaweiAiGalleryEmbeddingOptions();
         }
 
-        public Builder withModel(String model) {
-            this.options.setModel(model);
+        public Builder withEndpoint(String endpoint) {
+            this.options.setEndpoint(endpoint);
+            return this;
+        }
+
+        public Builder withAppId(String appId) {
+            this.options.setAppId(appId);
+            return this;
+        }
+
+        public Builder withUser(String user) {
+            this.options.setUser(user);
             return this;
         }
 
