@@ -1,23 +1,23 @@
 package org.springframework.ai.huaweiai.gallery.metadata;
 
-import com.huaweicloud.pangu.dev.sdk.client.gallery.GalleryUsage;
+import com.huaweicloud.pangu.dev.sdk.client.gallery.chat.GalleryTokenUsage;
 import org.springframework.ai.chat.metadata.Usage;
 import org.springframework.util.Assert;
 
 public class HuaweiAiGalleryUsage implements Usage {
 
-    public static HuaweiAiGalleryUsage from(GalleryUsage usage) {
+    public static HuaweiAiGalleryUsage from(GalleryTokenUsage usage) {
         return new HuaweiAiGalleryUsage(usage);
     }
 
-    private final GalleryUsage usage;
+    private final GalleryTokenUsage usage;
 
-    protected HuaweiAiGalleryUsage(GalleryUsage usage) {
+    protected HuaweiAiGalleryUsage(GalleryTokenUsage usage) {
         Assert.notNull(usage, "Huawei AI GalleryUsage must not be null");
         this.usage = usage;
     }
 
-    protected GalleryUsage getUsage() {
+    protected GalleryTokenUsage getUsage() {
         return this.usage;
     }
 

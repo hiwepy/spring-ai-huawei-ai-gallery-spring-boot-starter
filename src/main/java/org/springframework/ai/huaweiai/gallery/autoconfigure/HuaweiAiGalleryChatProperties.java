@@ -6,9 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
 @ConfigurationProperties(HuaweiAiGalleryChatProperties.CONFIG_PREFIX)
-public class HuaweiAiGalleryChatProperties {
+public class HuaweiAiGalleryChatProperties extends HuaweiAiParentProperties {
 
-    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.gallery.chat";
+    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.pangu.chat";
 
 
     /**
@@ -24,7 +24,6 @@ public class HuaweiAiGalleryChatProperties {
     @NestedConfigurationProperty
     private HuaweiAiGalleryChatOptions options = HuaweiAiGalleryChatOptions.builder()
             .withTemperature(ApiUtils.DEFAULT_TEMPERATURE)
-            .withTopP(ApiUtils.DEFAULT_TOP_P)
             .build();
 
     public HuaweiAiGalleryChatOptions getOptions() {

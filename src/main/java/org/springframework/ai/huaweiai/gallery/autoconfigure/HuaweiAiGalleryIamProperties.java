@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 @ConfigurationProperties(HuaweiAiGalleryIamProperties.CONFIG_PREFIX)
 public class HuaweiAiGalleryIamProperties {
 
-    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.gallery.iam";
+    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.pangu.iam";
 
     private String url;
     private String domain;

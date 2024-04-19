@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 @ConfigurationProperties(HuaweiAiGalleryConnectionProperties.CONFIG_PREFIX)
 public class HuaweiAiGalleryConnectionProperties extends HuaweiAiParentProperties {
 
-    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.gallery";
+    public static final String CONFIG_PREFIX = "spring.ai.huaweiai.pangu";
 
     private String moduleVersion;
     private String systemPrompt;
